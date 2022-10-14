@@ -52,6 +52,11 @@ const doneTask = () => {
   console.log(tasksList);
 };
 
+// exit manager application
+const exitManager = () => {
+console.log('Have a nice day. Bye!!!');
+return null;
+}
 
 // manager application
 const manager = () => {
@@ -60,10 +65,11 @@ let menuStart = 1;
   while (menuStart === 1) {
     displayMenu();
     menuStart--;
-    let i = 0;
-    let action = Number(input.question("Select what you want to do it: "));
-    i = action;
+   
   }
+  let i = 0;
+  let action = Number(input.question("Select what you want to do it: "));
+  i = action;
   if (i === 1) {
     displayTasks();
   } else if (i === 2) {
@@ -73,10 +79,10 @@ let menuStart = 1;
   } else if (i === 4) {
     doneTask();
   } else if (i === 5) {
-    
+exitManager();
   }
 };
-
+manager();
 
 /*
 // adding new task
